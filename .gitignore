@@ -1,0 +1,25 @@
+
+# Python environment
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# API keys and environment variables
+.env
+.env.*
+!.env.example
+
+# Temporary uploads and generated files
+uploads/
+*.backup.py
+sample_backup.py
+
+# Local test files
+test_gemini.py
+integration_test.py
+integration_sample.py
+api_generation_test.py
+large_test.py
+invalid_test.py
+empty_test.py

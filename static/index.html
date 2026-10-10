@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Python Refactorer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon">&lt;/&gt;</span>
+            <span>Smart Python Refactorer</span>
+        </div>
+        <span class="status">
+            <span class="status-dot"></span>
+            AI Engine
+        </span>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <p class="eyebrow">AI-POWERED PYTHON TOOL</p>
+            <h1>Make your Python code<br><span>clearer and better.</span></h1>
+            <p class="subtitle">
+                Automatically generate meaningful docstrings for your
+                Python functions and validate your updated code.
+            </p>
+        </section>
+
+        <section class="workspace">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Refactor your code</h2>
+                    <p>Upload a Python file to get started.</p>
+                </div>
+                <span class="file-limit">MAX 1 MB</span>
+            </div>
+
+            <form id="upload-form">
+
+                <label for="python-file" class="upload-area" id="upload-area">
+                    <span class="upload-icon">↑</span>
+                    <span class="upload-title">Choose your Python file</span>
+                    <span class="upload-description">
+                        Click here to browse your files
+                    </span>
+                    <span class="file-types">PYTHON FILES ONLY (.py)</span>
+                </label>
+
+                <input
+                    type="file"
+                    id="python-file"
+                    name="file"
+                    accept=".py"
+                    hidden
+                >
+
+                <div id="selected-file" class="selected-file" hidden>
+                    <span class="file-icon">PY</span>
+                    <div class="file-details">
+                        <span id="file-name"></span>
+                        <span id="file-size"></span>
+                    </div>
+                    <button type="button" id="remove-file" class="remove-button">
+                        Remove
+                    </button>
+                </div>
+
+                <button type="submit" id="refactor-button" class="primary-button">
+                    Refactor Python Code
+                    <span>→</span>
+                </button>
+
+            </form>
+
+            <div id="message" class="message" role="status" hidden></div>
+
+            <section id="results" class="results" hidden>
+                <h2>Refactoring Results</h2>
+                <div id="result-summary"></div>
+                <div id="docstring-results"></div>
+                <a id="download-link" class="download-button" href="#" hidden>
+                    Download Refactored File
+                </a>
+            </section>
+
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <span class="feature-icon">✦</span>
+                <h3>AI-generated docstrings</h3>
+                <p>Generate descriptions tailored to each function.</p>
+            </div>
+
+            <div class="feature">
+                <span class="feature-icon">✓</span>
+                <h3>Code validation</h3>
+                <p>Check whether the refactored program passes validation.</p>
+            </div>
+
+            <div class="feature">
+                <span class="feature-icon">↓</span>
+                <h3>Download your code</h3>
+                <p>Get the updated Python file when processing succeeds.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Smart Python Refactorer · AI-assisted code documentation</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
